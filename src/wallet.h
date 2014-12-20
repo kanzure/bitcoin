@@ -285,7 +285,7 @@ public:
     CAmount GetImmatureWatchOnlyBalance() const;
     bool FundTransaction(const CTransaction& txToFund, CMutableTransaction& txNew, CAmount& nFeeRet, std::string& strFailReason);
     bool CreateTransaction(const std::vector<std::pair<CScript, CAmount> >& vecSend, const std::vector<CTxIn> vins,
-                           CWalletTx& wtxNew, CMutableTransaction& txNew, CReserveKey& reservekey, CAmount& nFeeRet, std::string& strFailReason, const CCoinControl *coinControl = NULL, bool sign = true);
+                           CWalletTx& wtxNew, CMutableTransaction& txNew, CReserveKey& reservekey, CAmount& nFeeRet, std::string& strFailReason, const CCoinControl *coinControl = NULL, bool sign = false);
     bool CreateTransaction(const std::vector<std::pair<CScript, CAmount> >& vecSend,
                            CWalletTx& wtxNew, CMutableTransaction& txNew, CReserveKey& reservekey, CAmount& nFeeRet, std::string& strFailReason, const CCoinControl *coinControl = NULL, bool sign = true);
     bool CreateTransaction(CScript scriptPubKey, const CAmount& nValue,

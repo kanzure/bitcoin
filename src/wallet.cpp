@@ -1427,8 +1427,8 @@ bool CWallet::FundTransaction(const CTransaction& txToFund, CMutableTransaction&
 bool CWallet::CreateTransaction(const vector<pair<CScript, CAmount> >& vecSend,
                                 CWalletTx& wtxNew, CMutableTransaction& txNew, CReserveKey& reservekey, CAmount& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl, bool sign)
 {
-    vector<CTxIn> vINs;
-    return CreateTransaction(vecSend, vINs, wtxNew, txNew, reservekey, nFeeRet, strFailReason, coinControl, sign);
+    vector<CTxIn> vin;
+    return CreateTransaction(vecSend, wtxNew, txNew, reservekey, nFeeRet, strFailReason, coinControl, sign);
 }
 
 bool CWallet::CreateTransaction(const vector<pair<CScript, CAmount> >& vecSend, const vector<CTxIn> vINs,
